@@ -33,6 +33,9 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
 
     # browser api
+    path('api/', include('users.api.urls')),
+
+    # browser api-auth
     path('api-auth/', include('rest_framework.urls')),
     # rest api
     path('api/rest-auth/', include('rest_auth.urls')),
