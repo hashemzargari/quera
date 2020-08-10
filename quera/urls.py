@@ -35,6 +35,9 @@ urlpatterns = [
     # browser api
     path('api/', include('users.api.urls')),
 
+    # browser api => questions
+    path('api/', include('questions.api.urls')),
+
     # browser api-auth
     path('api-auth/', include('rest_framework.urls')),
     # rest api

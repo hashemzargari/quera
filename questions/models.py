@@ -21,10 +21,10 @@ class Answer(models.Model):
     body = models.TextField()
     question = models.ForeignKey(Question,
                                  on_delete=models.CASCADE,
-                                 name='answers')
+                                 related_name='answers')
     author = models.ForeignKey(settings.AUTH_USER_MODEL,
                                on_delete=models.CASCADE,
-                               name='user_answers')
+                               related_name='answers')
     voters = models.ManyToManyField(settings.AUTH_USER_MODEL,
                                     related_name='votes')
 
