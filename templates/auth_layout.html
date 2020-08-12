@@ -1,34 +1,41 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+{% extends "base.html" %}
+{% block style %}
+<style>
+    html, body {
+        height: 100%;
+        font-family: "Playfair Display", serif;
+    }
 
-    <!-- Bootstrap4 -> CSS only -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    .auth-box {
+        border: 3px solid lightgrey;
+        border-radius: 10px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        width: 600px;
+        margin: auto;
+    }
 
+    .login-form-container {
+        width: 300px;
+        margin: auto;
+    }
 
-    <title>Quera</title>
+    .registration-form-container {
+        width: 400px;
+        margin: auto;
+    }
 
-    <style>
-        .login-form-container {
-            width: 300px;
-            margin: auto;
-        }
+    .outer-area {
+        margin-top: 100px;
+    }
+</style>
+{% endblock %}
 
-        .registration-form-container {
-            width: 400px;
-            margin: auto;
-        }
-    </style>
-</head>
-<body>
-<div class="auth-box text-center">
-    {% block content %}
-    {% endblock %}
+{% block content %}
+<div class="outer-area">
+    <div class="auth-box text-center">
+        {% block auth %}
+        {% endblock %}
+    </div>
 </div>
-</body>
-</html>
+{% endblock %}

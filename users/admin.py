@@ -1,11 +1,13 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import CustomUser
+from users.models import CustomUser
 
 
 class CustomUserAdmin(UserAdmin):
+    # add_form = 
+    # form = 
     model = CustomUser
-    list = ['username', 'email', 'is_staff']
+    list_display = ["username", "email", "is_staff"]
 
 
 admin.site.register(CustomUser, CustomUserAdmin)

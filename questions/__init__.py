@@ -1,1 +1,1 @@
-default_app_config = 'questions.apps.QuestionsConfig'
+default_app_config = "questions.apps.QuestionsConfig"
